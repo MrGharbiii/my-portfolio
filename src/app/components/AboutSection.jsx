@@ -54,7 +54,7 @@ const AboutSection = () => {
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-lg">
-          I'm Ahmed Gharbi, a driven software engineer with hands-on experience in frontend and backend development. I specialize in building smooth, user-centered applications, leveraging tools like SAPUI5, Vue.js, Next.js, and Flutter. From optimizing UIs to enhancing system efficiency, I approach each project with a problem-solving mindset and a passion for learning. With a solid background in collaborating on SAP Fiori apps, cloud projects, and intelligent systems, I'm eager to push boundaries, expand my skills, and create meaningful tech solutions in collaborative environments.
+          I'm Ahmed Gharbi, a driven software engineer with hands-on experience in frontend and backend development. I specialize in building smooth, user-centered applications, leveraging tools like SAPUI5, Vue.js, Next.js, and React Native. From optimizing UIs to enhancing system efficiency, I approach each project with a problem-solving mindset and a passion for learning. With a solid background in collaborating on SAP Fiori apps, cloud projects, and intelligent systems, I'm eager to push boundaries, expand my skills, and create meaningful tech solutions in collaborative environments.
 
 .
           </p>
