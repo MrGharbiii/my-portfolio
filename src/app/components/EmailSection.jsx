@@ -18,6 +18,8 @@ const EmailSection = () => {
     const JSONdata = JSON.stringify(data);
     const endpoint = "/api/send";
 
+
+
     // Form the request for sending data to the server.
     const options = {
       // The method is POST because we are sending data.
@@ -34,6 +36,10 @@ const EmailSection = () => {
     const resData = await response.json();
 
     if (response.status === 200) {
+      console.log(resData);
+      console.log(response);
+      
+      
       console.log("Message sent.");
       setEmailSubmitted(true);
     }
