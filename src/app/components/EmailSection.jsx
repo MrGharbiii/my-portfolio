@@ -21,10 +21,10 @@ const EmailSection = () => {
 
     try {
       const response = await emailjs.send(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID, // Use environment variable
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID, // Use environment variable
+        process.env.EMAILJS_SERVICE_ID, // Use environment variable
+        process.env.EMAILJS_TEMPLATE_ID, // Use environment variable
         data,
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY // Use environment variable
+        process.env.EMAILJS_PUBLIC_KEY // Use environment variable
       );
 
       if (response.status === 200) {
