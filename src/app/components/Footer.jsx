@@ -11,7 +11,7 @@ const Footer = () => {
         >
           <div className="bg-gradient-to-r from-teal-400 to-yellow-200 bg-clip-text text-transparent">MrGharbi.</div>
         </Link>
-        <p className="text-slate-600">All rights reserved.</p>
+        <p className="text-slate-600">Made with Love, and js.</p>
       </div>
     </footer>
   );
