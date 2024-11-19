@@ -2,61 +2,43 @@
 import React, { useState } from "react";
 import GithubIcon from "../../../public/github-icon.svg";
 import LinkedinIcon from "../../../public/linkedin-icon.svg";
+import emailjs from "emailjs-com";
 import Link from "next/link";
 import Image from "next/image";
 
 const EmailSection = () => {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     const data = {
-      email: e.target.email.value,
+      user_email: e.target.email.value,
       subject: e.target.subject.value,
       message: e.target.message.value,
     };
-    const JSONdata = JSON.stringify(data);
-    console.log(data);
-    
-    const endpoint = "/api/send";
 
-    const res = await fetch(endpoint, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSONdata,
-    });
-    
-    if (!res.ok) throw new Error('Failed to send message');
-//     // Form the request for sending data to the server.
-//     const options = {
-//       // The method is POST because we are sending data.
-//       method: "POST",
-//       // Tell the server we're sending JSON.
-//       headers: {
-//         "Content-Type": "application/json",
-//       },
-//       // Body of the request is the JSON data we created above.
-//       body: JSONdata,
-//     };
-// console.log("aaa");
+    try {
+      const response = await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID, // Use environment variable
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID, // Use environment variable
+        data,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY // Use environment variable
+      );
 
-//     const response = await fetch(endpoint, options);
-//     console.log("aaa");
-//     const resData = await response.json();
-//     console.log("aaa");
-
-//     if (response.status === 200) {
-//       console.log(resData);
-//       console.log(response);
-      
-      
-//       console.log("Message sent.");
-//       setEmailSubmitted(true);
-//     }
+      if (response.status === 200) {
+        setEmailSubmitted(true);
+        setErrorMessage("");
+        e.target.reset(); // Clear the form
+      } else {
+        throw new Error("Failed to send email.");
+      }
+    } catch (error) {
+      console.error("Email send error:", error);
+      setErrorMessage("Something went wrong. Please try again.");
+    }
   };
-
   return (
     <section
       id="contact"
