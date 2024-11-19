@@ -5,6 +5,7 @@ import LinkedinIcon from "../../../public/linkedin-icon.svg";
 import emailjs from "emailjs-com";
 import Link from "next/link";
 import Image from "next/image";
+import { handleMail } from "../actions/handleMail";
 
 const EmailSection = () => {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
@@ -21,10 +22,10 @@ const EmailSection = () => {
 
     try {
       const response = await emailjs.send(
-        process.env.EMAILJS_SERVICE_ID, // Use environment variable
-        process.env.EMAILJS_TEMPLATE_ID, // Use environment variable
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID, // Use environment variable
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID, // Use environment variable
         data,
-        process.env.EMAILJS_PUBLIC_KEY // Use environment variable
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY // Use environment variable
       );
 
       if (response.status === 200) {
