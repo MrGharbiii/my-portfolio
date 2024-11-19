@@ -16,33 +16,45 @@ const EmailSection = () => {
       message: e.target.message.value,
     };
     const JSONdata = JSON.stringify(data);
+    console.log(data);
+    
     const endpoint = "/api/send";
 
-
-
-    // Form the request for sending data to the server.
-    const options = {
-      // The method is POST because we are sending data.
-      method: "POST",
-      // Tell the server we're sending JSON.
+    const res = await fetch(endpoint, {
+      method: 'POST',
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
-      // Body of the request is the JSON data we created above.
       body: JSONdata,
-    };
+    });
+    
+    if (!res.ok) throw new Error('Failed to send message');
+//     // Form the request for sending data to the server.
+//     const options = {
+//       // The method is POST because we are sending data.
+//       method: "POST",
+//       // Tell the server we're sending JSON.
+//       headers: {
+//         "Content-Type": "application/json",
+//       },
+//       // Body of the request is the JSON data we created above.
+//       body: JSONdata,
+//     };
+// console.log("aaa");
 
-    const response = await fetch(endpoint, options);
-    const resData = await response.json();
+//     const response = await fetch(endpoint, options);
+//     console.log("aaa");
+//     const resData = await response.json();
+//     console.log("aaa");
 
-    if (response.status === 200) {
-      console.log(resData);
-      console.log(response);
+//     if (response.status === 200) {
+//       console.log(resData);
+//       console.log(response);
       
       
-      console.log("Message sent.");
-      setEmailSubmitted(true);
-    }
+//       console.log("Message sent.");
+//       setEmailSubmitted(true);
+//     }
   };
 
   return (
@@ -137,3 +149,4 @@ const EmailSection = () => {
 };
 
 export default EmailSection;
+ 

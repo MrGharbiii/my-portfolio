@@ -1,28 +1,27 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
-// import { config } from 'dotenv';
-// config();
-// console.log('Loaded Variables:', process.env);
+export async function POST(request) {
+  const { email, subject, message } = await request.json();
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-const fromEmail = process.env.FROM_EMAIL;
-
-console.log(fromEmail);
-
-export async function POST(req, res) {
-  const { email, subject, message } = await req.json();
-  console.log(email, subject, message);
-  try {
-    console.log(fromEmail);
-    const data = await resend.emails.send({
-      from: 'noreply@gharbi.com',
-      to: 'ahmedgharbigharbi718@gmail.com',
-      subject: 'Hello World',
-      html: '<p>Congrats on sending your <strong>first email</strong>!</p>',
-    });
-    return NextResponse.json(data);
-  } catch (error) {
-    return NextResponse.json({ error });
+  if (!email || !message) {
+    return new Response(
+      JSON.stringify({ error: 'Email and message are required' }),
+      {
+        status: 400,
+      }
+    );
   }
+
+  // Log the data (for demonstration)
+  console.log({ email, subject, message });
+
+  // Return success response
+  return new Response(
+    JSON.stringify({ message: 'Message sent successfully!' }),
+    {
+      status: 200,
+      headers: { 'Content-Type': 'application/json' },
+    }
+  );
 }
