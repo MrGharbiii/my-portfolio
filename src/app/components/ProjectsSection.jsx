@@ -6,6 +6,33 @@ import { motion, useInView } from "framer-motion";
 
 const projectsData = [
   {
+    id: 8,
+    title: "Obesity Profiles Classifier",
+    description: "Random Forest model (scikit-learn) classifying obesity profiles with a 73.4% F1-score, reducing manual diagnostic effort for nutritionists.",
+    image: "/images/projects/8.png",
+    tag: ["All", "AI", "Web"],
+    gitUrl: "https://profile-prediction-website.vercel.app",
+    previewUrl: "/",
+  },
+  {
+    id: 10,
+    title: "SAP Quality Management with Fiori",
+    description: "SAPUI5 Fiori UIs that streamlined defect detection & refund processes for quality managers.",
+    image: "/images/projects/10.png",
+    tag: ["All", "Web"],
+    gitUrl: "",
+    previewUrl: "/",
+  },
+   {
+    id: 9,
+    title: "Slim&Healthy Digital Health Assistant",
+    description: "cross-platform health app (React Native, Node.js/Express, React.js dashboard) adopted by early users for personalized health tracking.",
+    image: "/images/projects/9.png",
+    tag: ["All","AI","Mobile","Web"],
+    gitUrl: "https://admin-dashboard-slim-healthy.vercel.app",
+    previewUrl: "/",
+  },
+  {
     id: 1,
     title: "Easybank op",
     description: "Simplify banking operations with a user-friendly interface and essential banking features using Vue.js, Express.js and OCR Api",
@@ -16,11 +43,11 @@ const projectsData = [
   },
   {
     id: 2,
-    title: "Issatso Dashboard",
-    description: "University dashboard for students using React.js",
+    title: "Olea Divina Website",
+    description: "Product Website for Olive Oil Company using React.js",
     image: "/images/projects/2.png",
     tag: ["All", "Web"],
-    gitUrl: "https://github.com/Ramy99-dev/mini-projet/tree/web",
+    gitUrl: "https://olea-divina.vercel.app",
     previewUrl: "/",
   },
   {
@@ -113,6 +140,11 @@ const ProjectsSection = () => {
           onClick={handleTagChange}
           name="Desktop"
           isSelected={tag === "Desktop"}
+        />
+        <ProjectTag
+          onClick={handleTagChange}
+          name="AI"
+          isSelected={tag === "AI"}
         />
       </div>
       <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">

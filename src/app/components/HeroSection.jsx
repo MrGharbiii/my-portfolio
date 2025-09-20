@@ -22,9 +22,13 @@ const HeroSection = () => {
             <br></br>
             <TypeAnimation
               sequence={[
-                "Frontend Developer",
+                "Software Engineer",
+                1000,
+                "Web Developer",
                 1000,
                 "Mobile Developer",
+                1000,
+                "SAPUI5 Developer",
                 1000,
                
               ]}
@@ -34,7 +38,7 @@ const HeroSection = () => {
             />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-          A passionate software developer creating impactful, user-focused apps. I build efficient solutions, from polished UIs to streamlined systems, blending tech curiosity with problem-solving.
+          Full-stack Software Engineering graduate with experience in AI-powered health tech, SAP QM development, and OCR-based fintech solutions. Award-winning innovator with global recognition and a strong record of delivering scalable apps in cross-border teams and open to Internship Software Development opportunities.
           </p>
           <div>
             <Link
@@ -44,7 +48,7 @@ const HeroSection = () => {
               Hire Me
             </Link>
             <Link
-              href="https://drive.google.com/file/d/1uTfm306oRuB4265HYU5C_a7ZNhJOguTu/view?usp=sharing"
+              href="https://drive.google.com/file/d/1ibuVo6g55lrV_-RM1GObZg1E5kSCV551/view?usp=sharing"
               className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-teal-400 to-yellow-200 hover:bg-slate-800 text-white mt-3"
             >
               <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
@@ -59,14 +63,14 @@ const HeroSection = () => {
           transition={{ duration: 0.5 }}
           className="col-span-4 place-self-center mt-4 lg:mt-0"
         >
-          <div className="rounded-full bg-teal-200 w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
+          <div className="rounded-full bg-teal-200 w-[280px] h-[280px] lg:w-[400px] lg:h-[400px] relative">
             <Image
-              src="/images/hero-image.png"
+              src="/images/imgg.png"
               alt="hero image"
               priority={true}
-              className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-              width={400}
-              height={400}
+              className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 "
+              width={600}
+              height={600}
             />
           </div>
         </motion.div>
