@@ -5,12 +5,30 @@ import ProjectTag from "./ProjectTag";
 import { motion, useInView } from "framer-motion";
 
 const projectsData = [
+{
+    id: 12,
+    title: "Data Professionals Survey",
+    description: "This project analyzes a dataset of 630 data professionals, including Data Analysts, Data Scientists, Data Engineers, Data Architects, and other related roles. It provides insights into salaries, satisfaction levels, demographics, and programming language preferences.",
+    image: "/images/projects/12.png",
+    tag: ["All", "Data Analysis"],
+    gitUrl: "https://github.com/MrGharbiii/data-professionals-analysis-powerbi",
+    previewUrl: "/",
+  },
+  {
+    id: 11,
+    title: "Heart Disease Data Analysis",
+    description: "This project analyzes a heart disease dataset to explore patterns, distributions, and relationships between patient features and disease severity.",
+    image: "/images/projects/11.png",
+    tag: ["All", "Data Analysis"],
+    gitUrl: "https://github.com/MrGharbiii/heart-disease-analysis-python",
+    previewUrl: "/",
+  }, 
   {
     id: 8,
     title: "Obesity Profiles Classifier",
     description: "Random Forest model (scikit-learn) classifying obesity profiles with a 73.4% F1-score, reducing manual diagnostic effort for nutritionists.",
     image: "/images/projects/8.png",
-    tag: ["All", "AI", "Web"],
+    tag: ["All", "ML", "Web"],
     gitUrl: "https://profile-prediction-website.vercel.app",
     previewUrl: "/",
   },
@@ -28,7 +46,7 @@ const projectsData = [
     title: "Slim&Healthy Digital Health Assistant",
     description: "cross-platform health app (React Native, Node.js/Express, React.js dashboard) adopted by early users for personalized health tracking.",
     image: "/images/projects/9.png",
-    tag: ["All","AI","Mobile","Web"],
+    tag: ["All","ML","Mobile","Web"],
     gitUrl: "https://admin-dashboard-slim-healthy.vercel.app",
     previewUrl: "/",
   },
@@ -128,6 +146,11 @@ const ProjectsSection = () => {
         />
         <ProjectTag
           onClick={handleTagChange}
+          name="Data Analysis"
+          isSelected={tag === "Data Analysis"}
+        />
+        <ProjectTag
+          onClick={handleTagChange}
           name="Web"
           isSelected={tag === "Web"}
         />
@@ -143,8 +166,8 @@ const ProjectsSection = () => {
         />
         <ProjectTag
           onClick={handleTagChange}
-          name="AI"
-          isSelected={tag === "AI"}
+          name="ML"
+          isSelected={tag === "ML"}
         />
       </div>
       <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">

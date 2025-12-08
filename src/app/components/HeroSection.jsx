@@ -24,9 +24,9 @@ const HeroSection = () => {
               sequence={[
                 "Software Engineer",
                 1000,
-                "Web Developer",
-                1000,
-                "Mobile Developer",
+                "Data Analyst",
+                2000,
+                "ML Developer",
                 1000,
                 "SAPUI5 Developer",
                 1000,
@@ -38,7 +38,7 @@ const HeroSection = () => {
             />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-          Full-stack Software Engineering graduate with experience in AI-powered health tech, SAP QM development, and OCR-based fintech solutions. Award-winning innovator with global recognition and a strong record of delivering scalable apps in cross-border teams and open to Internship Software Development opportunities.
+          Software Engineering graduate transitioning into Data Analysis. Skilled in SQL, Power BI, Excel, and Python. Experienced in data cleaning, modeling, visualization, and building interactive dashboards that communicate insights clearly.
           </p>
           <div>
             <Link

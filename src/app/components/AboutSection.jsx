@@ -9,11 +9,11 @@ const TAB_DATA = [
     id: "skills",
     content: (
       <ul className="list-disc pl-2">
-        <li>React.js</li>
-        <li>Vue.js</li>
-        <li>SAPUI5</li>
-        <li>Express</li>
-        <li>React Native</li>
+        <li>Python</li>
+        <li>PostgreSQL</li>
+        <li>Power BI</li>
+        <li>Matplotlib</li>
+        <li>Storytelling</li>
       </ul>
     ),
   },
@@ -22,7 +22,7 @@ const TAB_DATA = [
     id: "education",
     content: (
       <ul className="list-disc pl-2">
-        <li>Higher Institute of Applied Science and Technology of Sousse</li>
+        <li>National Engineering Diploma, Software Engineering, 2025 at the Higher Institute of Applied Science and Technology of Sousse</li>
       </ul>
     ),
   },
@@ -54,7 +54,11 @@ const AboutSection = () => {
         <div className="lg:mt-20 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-lg">
-          I am Ahmed Gharbi, a driven software engineer with hands-on experience in frontend and backend development. I specialize in building smooth, user-centered applications, leveraging tools like SAPUI5, Vue.js, Next.js, and React Native. From optimizing UIs to enhancing system efficiency, I approach each project with a problem-solving mindset and a passion for learning. With a solid background in collaborating on SAP Fiori apps, cloud projects, and intelligent systems, I'm eager to push boundaries, expand my skills, and create meaningful tech solutions in collaborative environments.
+       I’m a data analyst who believes every decision should be driven by clear, reliable insights.
+I transform raw data into meaningful stories, actionable dashboards, and models that solve real problems.
+My experience spans data cleaning, analysis, visualization, and machine learning across real client projects.
+I excel at simplifying complex technical ideas for non-technical people and aligning data work with true business needs.
+Curiosity, precision, and the drive to go the extra mile define the way I approach every dataset.
           </p>
           <div className="flex flex-row justify-start mt-8">
             <TabButton
