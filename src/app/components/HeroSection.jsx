@@ -25,9 +25,9 @@ const HeroSection = () => {
                 "Software Engineer",
                 1000,
                 "Data Analyst",
-                2000,
-                "ML Developer",
                 1000,
+                "Wordpress Developer",
+                2000,
                 "SAPUI5 Developer",
                 1000,
                
@@ -38,24 +38,9 @@ const HeroSection = () => {
             />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-          Software Engineering graduate transitioning into Data Analysis. Skilled in SQL, Power BI, Excel, and Python. Experienced in data cleaning, modeling, visualization, and building interactive dashboards that communicate insights clearly.
+          Full-stack web developer specializing in building modern, responsive web applications. Skilled in React, WordPress, REST APIs, and backend integration. Experienced in developing performant, scalable interfaces and delivering clean, user-focused digital experiences.
           </p>
-          <div>
-            <Link
-              href="/#contact"
-              className="px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-teal-400 to-yellow-200 hover:bg-slate-200 text-white"
-            >
-              Hire Me
-            </Link>
-            <Link
-              href="https://drive.google.com/file/d/1ibuVo6g55lrV_-RM1GObZg1E5kSCV551/view?usp=sharing"
-              className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-teal-400 to-yellow-200 hover:bg-slate-800 text-white mt-3"
-            >
-              <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
-                Download CV
-              </span>
-            </Link>
-          </div>
+         
         </motion.div>
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}

@@ -9,10 +9,10 @@ const TAB_DATA = [
     id: "skills",
     content: (
       <ul className="list-disc pl-2">
-        <li>Python</li>
-        <li>PostgreSQL</li>
+        <li>MySQL</li>
+        <li>WordPress</li>
         <li>Power BI</li>
-        <li>Matplotlib</li>
+        <li>Communication</li>
         <li>Storytelling</li>
       </ul>
     ),
@@ -54,11 +54,7 @@ const AboutSection = () => {
         <div className="lg:mt-20 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-lg">
-       I’m a data analyst who believes every decision should be driven by clear, reliable insights.
-I transform raw data into meaningful stories, actionable dashboards, and models that solve real problems.
-My experience spans data cleaning, analysis, visualization, and machine learning across real client projects.
-I excel at simplifying complex technical ideas for non-technical people and aligning data work with true business needs.
-Curiosity, precision, and the drive to go the extra mile define the way I approach every dataset.
+        I’m a full-stack web developer passionate about building clean, performant, and user-focused web applications. I transform ideas into interactive digital experiences using React, WordPress, and REST APIs, with a strong focus on usability, performance, and maintainable code. My experience includes developing custom themes, integrating backend services, and building responsive interfaces for real-world projects. I enjoy breaking down complex technical requirements into simple, scalable solutions that deliver real value to users and businesses. Curiosity, attention to detail, and a strong focus on continuous improvement define my approach to every project.
           </p>
           <div className="flex flex-row justify-start mt-8">
             <TabButton
